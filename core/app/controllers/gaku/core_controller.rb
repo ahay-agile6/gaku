@@ -8,8 +8,8 @@ module Gaku
       redirect_to root_url, alert: exception.message
     end
 
-    before_filter :set_locale
-    before_filter :users_check
+    before_action :set_locale
+    before_action :users_check
 
     # def user_for_paper_trail
     #   user_signed_in? ? current_user : 'Public user'  # or whatever
